@@ -1,0 +1,16 @@
+{
+  "name": "book-mock",
+  "version": "1.0.0",
+  "description": "Use real books in your Figma designs.",
+  "main": "code.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "npm run build -- --watch"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@figma/plugin-typings": "*",
+    "typescript": "*"
+  }
+}
