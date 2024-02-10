@@ -1,0 +1,170 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/figma-plugin-ds@1.0.1/dist/figma-plugin-ds.min.css">
+
+<style>
+    body {
+        display: flex;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        min-height: 100%;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        /* Ideally this would use something like --figma-color-scrollbar, but unfortunately they don't expose that one */
+        background-color: var(--figma-color-text-tertiary);
+        border-radius: 5px;
+        border: solid 2px var(--figma-color-bg);
+    }
+
+    #nav {
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+        gap: 8px;
+
+        border-bottom: solid 1px var(--figma-color-border);
+
+        height: 40px;
+
+        /* Don't flex within the body */
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+    }
+
+    .figma-dark .icon {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(269deg) brightness(103%) contrast(104%);
+    }
+
+    #data {
+        display: flex;
+        padding: 16px;
+        gap: 16px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+
+
+        flex-shrink: 0;
+        flex-grow: 1;
+        flex-basis: 0;
+
+        overflow-y: auto;
+    }
+
+    .checkbox {
+        height: initial;
+    }
+
+    .checkbox__label {
+        padding: 0;
+        margin-left: 0;
+        line-height: 13px;
+        color: var(--figma-color-text);
+    }
+
+    .checkbox__label::before {
+        border-radius: 3px;
+        border-color: var(--figma-color-text);
+    }
+
+    .checkbox__box:checked+.checkbox__label::before {
+        background-color: var(--figma-color-bg-brand);
+        border-color: var(--figma-color-bg-brand);
+    }
+
+    #buttons {
+        display: flex;
+        padding: 8px;
+        gap: 8px;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-self: stretch;
+
+        border-top: solid 1px var(--figma-color-border);
+        background-color: var(--figma-color-bg);
+
+        height: 48px;
+
+        /* Don't flex within the body */
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+    }
+
+    .button--secondary {
+        border-color: var(--figma-color-text);
+        color: var(--figma-color-text);
+        background-color: var(--figma-color-bg);
+    }
+
+    .button--primary {
+        background-color: var(--figma-color-bg-brand);
+    }
+
+    .type {
+        color: var(--figma-color-text);
+    }
+</style>
+
+<div id="nav">
+    <div class="icon-button">
+        <div class="icon icon--back"></div>
+    </div>
+    <div class="type type--bold">Search Results</div>
+</div>
+<div id="data">
+    <div class="type type--medium type--small">Data</div>
+    <div class="checkbox">
+        <input type="checkbox" name="cover" id="cover" class="checkbox__box">
+        <label for="cover" class="checkbox__label">Cover</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" name="title" id="title" class="checkbox__box">
+        <label for="title" class="checkbox__label">Title</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" name="author" id="author" class="checkbox__box">
+        <label for="author" class="checkbox__label">Author</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" name="description" id="description" class="checkbox__box">
+        <label for="description" class="checkbox__label">Description</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" name="isbn" id="isbn" class="checkbox__box">
+        <label for="isbn" class="checkbox__label">ISBN</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" name="cover" id="cover" class="checkbox__box">
+        <label for="cover" class="checkbox__label">Cover</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" name="title" id="title" class="checkbox__box">
+        <label for="title" class="checkbox__label">Title</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" name="author" id="author" class="checkbox__box">
+        <label for="author" class="checkbox__label">Author</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" name="description" id="description" class="checkbox__box">
+        <label for="description" class="checkbox__label">Description</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" name="isbn" id="isbn" class="checkbox__box">
+        <label for="isbn" class="checkbox__label">ISBN</label>
+    </div>
+</div>
+<div id="buttons">
+    <button id="cancel" class="button button--secondary">Cancel</button>
+    <button id="insert" class="button button--primary">Insert</button>
+</div>

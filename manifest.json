@@ -8,7 +8,10 @@
   "editorType": [
     "figma"
   ],
-  "ui": "ui.html",
+  "ui": {
+    "main": "./ui/main.html",
+    "result": "./ui/result.html"
+  },
   "networkAccess": {
     "allowedDomains": [
       "https://cdn.jsdelivr.net",
