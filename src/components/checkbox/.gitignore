@@ -1,0 +1,2 @@
+# We need to keep the types for this component since it is written w/ JS not TS
+!*.d.ts
