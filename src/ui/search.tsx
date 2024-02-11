@@ -12,7 +12,6 @@ export function Search() {
             <div id="nav">
                 <SearchTextbox placeholder="Search" value=""></SearchTextbox>
             </div>
-            <Divider />
             <Container space="medium" id="results">
                 <Stack space="medium">
                     <SearchResult
