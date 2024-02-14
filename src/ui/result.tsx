@@ -1,14 +1,27 @@
-import { Bold, Button, IconButton, IconChevronLeft32, Text } from "@create-figma-plugin/ui";
-import { h } from "preact";
+import { Bold, Button, IconButton, IconChevronLeft32, Text } from "@create-figma-plugin/ui"
+import { h } from "preact"
 
-import "!../styles/global.css";
-import "!../styles/result.css";
-import { Checkbox } from "../components/checkbox/Checkbox";
-import { emit } from "@create-figma-plugin/utilities";
+import "!../styles/global.css"
+import "!../styles/result.css"
+import { Checkbox } from "../components/checkbox/Checkbox"
+import { emit } from "@create-figma-plugin/utilities"
 
 export function Result() {
     function handleBack() {
         emit('BACK');
+    }
+    function handleClose() {
+        emit('CLOSE');
+    }
+    function handleInsert() {
+        const selected = {
+            cover: (document.getElementById('cover') as HTMLInputElement).checked,
+            title: (document.getElementById('title') as HTMLInputElement).checked,
+            author: (document.getElementById('author') as HTMLInputElement).checked,
+            description: (document.getElementById('description') as HTMLInputElement).checked,
+            isbn: (document.getElementById('isbn') as HTMLInputElement).checked
+        }
+        emit('INSERT', selected);
     }
     return (
         <div className="container">
@@ -37,8 +50,8 @@ export function Result() {
                 </Checkbox>
             </div>
             <div id="buttons">
-                <Button secondary>Cancel</Button>
-                <Button>Insert</Button>
+                <Button secondary onClick={handleClose}>Cancel</Button>
+                <Button onClick={handleInsert}>Insert</Button>
             </div>
         </div>
     )
