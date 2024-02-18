@@ -1,0 +1,49 @@
+.result {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: flex-start;
+    position: relative;
+    gap: 16px;
+}
+
+.cover {
+    width: 64px;
+    -webkit-user-drag: none;
+}
+
+.title {
+    color: var(--figma-color-text);
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+
+
+}
+
+.author {
+    color: var(--figma-color-text-secondary);
+    margin-bottom: 8px;
+}
+
+.description {
+    color: var(--figma-color-text);
+
+    height: 58px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+
+    line-height: normal;
+}
+
+.select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* width: 32px;
+    height: 32px; */
+}

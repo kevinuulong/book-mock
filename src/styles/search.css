@@ -1,0 +1,14 @@
+#results {
+    padding-top: var(--space-medium);
+    padding-bottom: var(--space-medium);
+
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-basis: 0;
+
+    overflow-y: auto;
+}
+
+#nav > div {
+    width: 100%;
+}

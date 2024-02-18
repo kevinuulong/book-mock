@@ -1,21 +1,10 @@
 {
-  "name": "Book Mock",
-  "id": "1318416522287760984",
   "api": "1.0.0",
-  "main": "code.js",
-  "capabilities": [],
-  "enableProposedApi": false,
   "editorType": [
     "figma"
   ],
-  "ui": {
-    "main": "./ui/main.html",
-    "result": "./ui/result.html"
-  },
-  "networkAccess": {
-    "allowedDomains": [
-      "https://cdn.jsdelivr.net",
-      "https://books.google.com"
-    ]
-  }
+  "id": "1318416522287760984",
+  "name": "Book Mock",
+  "main": "build/main.js",
+  "ui": "build/ui.js"
 }
